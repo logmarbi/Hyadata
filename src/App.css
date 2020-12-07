@@ -1,0 +1,72 @@
+.leaflet-container {
+  width: 100%;
+  height: 70vh;
+}
+
+.leaflet-container .leaflet-control-attribution,
+.leaflet-container .leaflet-control-scale {
+  font-size: 0px !important;
+}
+
+.apexcharts-tooltip {
+  color: black;
+}
+
+.apexcharts-toolbar {
+  color: black;
+}
+
+.MuiGrid-spacing-xs-6-201 > .MuiGrid-item-175 {
+  padding-bottom: 17px !important;
+}
+
+.MuiGrid-grid-xs-12-1486 {
+  margin-bottom: -20px !important;
+  margin-top: -20px !important;
+  margin: -20px !important;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.Home-content-6 {
+  overflow: hidden !important;
+}
+.Home-content-471 {
+  overflow: hidden !important;
+}
+.Home-content-936 {
+  overflow: hidden !important;
+}
+.Home-content-1401 {
+  overflow: hidden !important;
+}
+.Home-content-1866 {
+  overflow: hidden !important;
+}
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #187318;
+  width: -webkit-fill-available;
+}
+
+#style:focus {
+  background-color: yellow;
+}
+
+.centered {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.imageSettings {
+  /* -webkit-mask-image: '-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))';
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+  background-image: url('http://lorempixel.com/200/200/city/9');
+  width: 200px;
+  height: 200px;
+  /* you need to match the shadow color to your background or image border for the desired effect*/
+  box-shadow: 0 0 8px 8px white inset;
+}

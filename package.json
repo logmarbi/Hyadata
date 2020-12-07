@@ -1,0 +1,90 @@
+{
+  "homepage": "http://logmarbi.github.io/Green_Lanes",
+  "name": "green-trails-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Green Trails Dashboard",
+  "author": {
+    "name": "BI-TEAM"
+  },
+  "license": "BI-TEAM",
+  "keywords": [
+    "React",
+    "Material",
+    "Dashboard"
+  ],
+  "dependencies": {
+    "@date-io/date-fns": "^1.3.13",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/pickers": "^3.2.10",
+    "@material-ui/styles": "^4.10.0",
+    "@reach/router": "^1.3.4",
+    "apexcharts": "^3.20.2",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.0.0-beta.5",
+    "depcheck": "^1.2.0",
+    "formik": "^2.1.5",
+    "jss-rtl": "^0.3.0",
+    "leaflet": "^1.7.1",
+    "material-ui": "^1.0.0-beta.47",
+    "msal": "^1.4.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-apexcharts": "^1.3.7",
+    "react-app": "^1.1.2",
+    "react-dom": "^16.13.1",
+    "react-jss": "^10.4.0",
+    "react-leaflet": "^2.7.0",
+    "react-redux-template": "git+https://github.com/malerba118/react-redux-template.git",
+    "react-remove-scroll-bar": "^2.1.0",
+    "react-scripts": "^3.4.3",
+    "react-testing-library": "^5.4.4",
+    "yup": "^0.29.3"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
+    "analyze": "source-map-explorer build/static/js/main.*",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "test:coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.+(js|md|css|json)\""
+  },
+  "devDependencies": {
+    "docz": "^2.3.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.6",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "source-map-explorer": "^2.5.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{js,md,css,json}": [
+        "prettier --write",
+        "git add"
+      ]
+    }
+  },
+  "browserslist": [
+    ">0.25%",
+    "not op_mini all",
+    "ie 11"
+  ]
+}
