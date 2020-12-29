@@ -1,8 +1,8 @@
 {
-  "homepage": "http://logmarbi.github.io/Green_Lanes",
+  "homepage": ".",
   "name": "green-trails-dashboard",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "description": "Green Trails Dashboard",
   "author": {
     "name": "BI-TEAM"
@@ -43,8 +43,6 @@
     "yup": "^0.29.3"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
     "analyze": "source-map-explorer build/static/js/main.*",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
