@@ -135,6 +135,7 @@ function Home({ classes, theme }) {
         open={open}
         theme={theme}
         handleDrawerState={handleDrawerState}
+        doubleTheme={authContext.doubleTheme}
       />
       <main className={classes.content}>
         <Suspense fallback={<div>Loading...</div>}>

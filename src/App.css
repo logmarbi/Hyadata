@@ -70,3 +70,9 @@
   /* you need to match the shadow color to your background or image border for the desired effect*/
   box-shadow: 0 0 8px 8px white inset;
 }
+
+.apexcharts-canvas {
+  position: relative !important;
+  user-select: none !important;
+  /* cannot give overflow: hidden as it will crop tooltips which overflow outside chart area */
+}

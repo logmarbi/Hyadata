@@ -17,6 +17,28 @@ export const DaysBar = theme => ({
         }
       }
     },
+    tooltip: {
+      x: {
+        formatter: function (value) {
+          return value.split("").reverse().join("");
+        },
+      },
+    },
+    responsive: [
+      {
+        breakpoint: 1000,
+        options: {
+          plotOptions: {
+            bar: {
+              horizontal: false
+            }
+          },
+          legend: {
+            position: "bottom"
+          }
+        }
+      }
+    ],
     xaxis: {
       categories: [
         // "שבת",
@@ -74,16 +96,16 @@ export const DaysBar = theme => ({
     grid: {
       show: false
     },
-    // title: {
-    //   text: 'נסיעות מול ימים',
-    //   style: {
-    //     align: "right",
-    //     direction: "ltr",
-    //     color: theme.palette.text.primary,
-    //     fontSize: '24px',
-    //     cssClass: 'apexcharts-yaxis-title'
-    //   }
-    // },
+    title: {
+      text: "םויל םיעסונה תומכ",
+      align: "center",
+      style: {
+        color: theme.palette.text.primary,
+        fontSize: '24px',
+        fontWeight: 'normal',
+        fontFamily: 'Calibri , serif',
+      },
+    },
     dataLables: {
       style: {
         colors: theme.palette.text.primary
@@ -112,6 +134,13 @@ export const HoursBar = theme => ({
       height: 220,
       width: '100%',
       download: ClearIcon
+    },
+    tooltip: {
+      x: {
+        formatter: function (value) {
+          return value + ":00";
+        },
+      },
     },
     xaxis: {
       categories: ["23", "22", "21", "20", "19", "18", "17", "16", "15", "14", "13", "12", "11", "10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0"],
@@ -160,20 +189,17 @@ export const HoursBar = theme => ({
     grid: {
       show: false
     },
-    // title: {
-    //   text: "יובל",
-    //   align: "center"
-    // },
-    // title: {
-    //   text: 'נסיעות מול ימים',
-    //   style: {
-    //     align: "right",
-    //     direction: "ltr",
-    //     color: theme.palette.text.primary,
-    //     fontSize: '24px',
-    //     cssClass: 'apexcharts-yaxis-title'
-    //   }
-    // },
+    title: {
+      text: "העשל םיעסונה תומכ",
+      align: "center",
+      style: {
+        color: theme.palette.text.primary,
+        fontSize: '24px',
+        fontWeight: 'normal',
+        fontFamily: 'Calibri, serif',
+      },
+
+    },
     dataLables: {
       style: {
         colors: theme.palette.text.primary

@@ -43,6 +43,22 @@ export default class AuthProvider extends Component {
       }
     })
   }
+  doubleTheme = () => {
+    this.setState(prevState => {
+      const theme = prevState.theme === 'light' ? 'dark' : 'light'
+      localStorage.setItem('theme', theme)
+      return {
+        theme
+      }
+    })
+    this.setState(prevState => {
+      const theme = prevState.theme === 'light' ? 'dark' : 'light'
+      localStorage.setItem('theme', theme)
+      return {
+        theme
+      }
+    })
+  }
 
   render() {
     const { children } = this.props
@@ -52,7 +68,8 @@ export default class AuthProvider extends Component {
           user: this.state,
           authenticate: this.authenticate,
           logout: this.logout,
-          changeTheme: this.changeTheme
+          changeTheme: this.changeTheme,
+          doubleTheme: this.doubleTheme
         }}
       >
         {children}

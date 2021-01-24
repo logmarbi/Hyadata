@@ -8,6 +8,8 @@ import Filters from './Filters'
 import cars from './newest.jpg';
 import { TramRounded } from '@material-ui/icons'
 
+// להמשיך מכאן ולהשתמש בפונקצייה של בקריאה הכפולה - מכאן יש לחפש את ה אירוע של ריחוף ויציאה מריחוף
+
 const styles = ({ palette, spacing }) => ({
   root: {
     width: '100%',
@@ -22,7 +24,7 @@ const styles = ({ palette, spacing }) => ({
   }
 })
 
-function NestedList({ classes, routes, isDrawerOpen, handleDrawerState }) {
+function NestedList({ classes, routes, isDrawerOpen, handleDrawerState, doubleTheme }) {
   const [isOpen, setIsOpen] = useState({})
   const [selectedRoute, setSelectedRoute] = useState('')
   const [isFilterOpen, setIsFilterOpen] = useState(true)

@@ -58,7 +58,7 @@ const styles = ({ transitions, spacing, mixins }) => ({
   }
 })
 
-function SideDrawer({ classes, open, theme, routes, handleDrawerState }) {
+function SideDrawer({ classes, open, theme, routes, handleDrawerState, doubleTheme }) {
   return (
     <ThemeProvider theme={darkTheme}>
       {/* <ThemeProvider > */}
@@ -87,8 +87,7 @@ function SideDrawer({ classes, open, theme, routes, handleDrawerState }) {
           </IconButton>
         </div>
         <Divider />
-        <DrawerMenu routes={routes} isDrawerOpen={open} handleDrawerState={handleDrawerState}
-        />
+        <DrawerMenu routes={routes} isDrawerOpen={open} handleDrawerState={handleDrawerState} doubleTheme={doubleTheme} />
       </Drawer>
     </ThemeProvider>
 
