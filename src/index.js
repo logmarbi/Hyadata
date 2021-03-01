@@ -2,13 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
-import { runApp } from './click/msal'
 import App from './App'
 import ErrorBoundary from './utils/errorCatch/ErrorBoundary'
-
 import registerServiceWorker from './registerServiceWorker'
 
 
+window.addEventListener('popstate', (event) => {
+  console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
+});
 
 (async () => {
 
@@ -21,14 +22,13 @@ import registerServiceWorker from './registerServiceWorker'
     }
   })
 
-  let myApp = await runApp(<MuiThemeProvider theme={theme}>
+
+  ReactDOM.render(<MuiThemeProvider theme={theme}>
     <ErrorBoundary>
       <CssBaseline />
       <App />
     </ErrorBoundary>
-  </MuiThemeProvider>);
-  console.log("finsih")
-  ReactDOM.render(myApp,
+  </MuiThemeProvider>,
     document.getElementById('root'));
 })();
 
@@ -37,13 +37,3 @@ registerServiceWorker()
 
 
 
-// ReactDOM.render(
-//   <MuiThemeProvider theme={theme}>
-//     <ErrorBoundary>
-//       <CssBaseline />
-//       <App />
-//     </ErrorBoundary>
-//   </MuiThemeProvider>,
-//   document.getElementById('root')
-// )
-// registerServiceWorker()

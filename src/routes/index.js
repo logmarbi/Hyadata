@@ -10,7 +10,7 @@ export default [
     icon: DashboardRounded
   },
   {
-    to: 'HotSpots',
+    to: 'Logistics',
     label: 'נקודות חמות',
     icon: Whatshot
   },
